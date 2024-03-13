@@ -2,15 +2,15 @@
     <h1>EMI Calculator</h1>
     <div class="form-group">
       <label for="principal">Principal Amount:</label>
-      <input type="number" class="form-control" id="principal" [(ngModel)]="principal" required>
+      <input type="number" id="principal" [(ngModel)]="principal" required>
     </div>
     <div class="form-group">
       <label for="rateOfInterest">Rate of Interest (% per annum):</label>
-      <input type="number" class="form-control" id="rateOfInterest" [(ngModel)]="rateOfInterest" required>
+      <input type="number" id="rateOfInterest" [(ngModel)]="rateOfInterest" required>
     </div>
     <div class="form-group">
       <label for="tenure">Tenure (in months):</label>
-      <input type="number" class="form-control" id="tenure" [(ngModel)]="tenure" required>
+      <input type="number" id="tenure" [(ngModel)]="tenure" required>
     </div>
     <button class="btn btn-success" (click)="calculateEMI()">Calculate EMI</button>
     <div *ngIf="emi">

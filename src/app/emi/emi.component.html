@@ -14,10 +14,14 @@
   </div>
   <div class="form-group">
     <label for="gst">GST</label>
-    <input type="number" id="gst" [(ngModel)]="gst">
+    <input type="number" id="gst" [(ngModel)]="gst" disabled>
   </div>
   <button class="btn btn-success" (click)="calculateEMI(principal, roi, t, gst)">Calculate EMI</button>
-  <h2>EMI to be paid: {{ emi }}</h2>
-  <h3>Interest: {{ interest }}</h3>
-  <!-- Other charges 2% + GST -->
+  <h2>
+    <span [style.color]="emiColor">EMI to be paid:</span> {{ emi }}
+  </h2>
+  
+  <h3>
+    <span [style.color]="interstColor">Interest:</span> {{ interest }}
+  </h3>
 </div>

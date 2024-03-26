@@ -9,17 +9,19 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./emi.component.css']
 })
 export class EmiComponent {
+
   principal: number = 0;
   roi: number = 0;
   t: number = 0;
   emi: number = 0;
   interest: number = 0;
   gst: number = 18; 
+  emiColor:string = "red";
+  interstColor:string = "maroon";
   calculateEMI(principal: number, roi: number, t: number, gst: number) {
     this.principal = principal;
     this.roi = roi;
     this.t = t;
-    this.gst = gst;
     
     // EMI Calculation
     const totalInterest = (this.principal * this.roi * this.t) / 100;

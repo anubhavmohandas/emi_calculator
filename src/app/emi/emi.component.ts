@@ -18,7 +18,7 @@ export class EmiComponent {
   gst: number = 18; 
   emiColor:string = "red";
   interstColor:string = "maroon";
-  calculateEMI(principal: number, roi: number, t: number, gst: number) {
+  calculateEMI(principal: number, roi: number, t: number) {
     this.principal = principal;
     this.roi = roi;
     this.t = t;

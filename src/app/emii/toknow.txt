@@ -1,0 +1,3 @@
+<p [class] = "myCSS">My CSS</p> - HTML
+myCSS = "red"; - TS // This red is the class name which we use in CSS file. 
+.red{color:blue} - CSS

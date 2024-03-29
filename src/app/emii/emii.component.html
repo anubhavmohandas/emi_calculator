@@ -1,25 +1,27 @@
 <!-- <input type="text" [value] = "userName"> -->
 <!-- {{userName}} -->
 
-Principal Amount: 
-<input type="text" #p = "p" placeholder="Principal Amount">
-<br>
-Rate of Interest:
-<input type="text" #roi = "roi" placeholder="Rate of Interest">
-<br>
-
-Tenure in Months:
-<input type="text" #t = "t" placeholder="Tenure in Months">
-<br>
-GST:
-<input type="text" [value] = "gst" disabled>
-<br>
-<button (click) = "calculateEMI(p, roi, t)">Calculate EMI</button>
-<!-- 
-<h2>
-    <span [style.color]="emiColor">EMI to be paid:</span> {{ emi }}
-</h2>
-
-<h3>
-    <span [style.color]="interstColor">Interest:</span> {{ interest }}
-</h3> -->
+<div class="emi-calculator">
+    <h2>EMI Calculator</h2>
+    <p>Principal Amount:</p>
+    <input type="text" #p placeholder="Principal Amount">
+    <br>
+    <p>Rate of Interest:</p>
+    <input type="text" #roi placeholder="Rate of Interest">
+    <br>
+    <p>Tenure in Months:</p>
+    <input type="text" #t placeholder="Tenure in Months">
+    <br>
+    <p>GST:</p>
+    <input type="text" [value] = "gst" disabled>
+    <br>
+    <button (click)="calculateEMI(+p.value, +roi.value, +t.value)">Calculate EMI</button>
+  
+    <div class="output">
+      <span [style.color]="emiColor">EMI to be paid:</span> {{ emi }}
+      <!-- {{ emi | number:'1.2-2' }} -->
+    </div>
+    <div class="output">
+      <span [style.color]="interestColor">Interest:</span> {{ interest }}
+    </div>
+</div>  

@@ -15,8 +15,8 @@ export class EmiiComponent {
   t:number = 0;
   emi:number = 0;
   interest:number = 0;
-  // emiColor:string = "red";
-  // interstColor:string = "maroon";
+  emiColor:string = "red";
+  interestColor:string = "maroon";
   
   calculateEMI(p:number, roi:number, t:number) {
     this.p = p;
@@ -27,6 +27,6 @@ export class EmiiComponent {
     this.interest = total;
     const totalAmount = this.p + total;
     const totalGST = (totalAmount * this.gst) / 100;
-    this.emi = (totalAmount + totalGST) / (this.t * 12);
+    this.emi = parseFloat(((totalAmount + totalGST) / (this.t * 12)).toFixed(2));
   }
 }

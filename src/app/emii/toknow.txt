@@ -1,3 +1,10 @@
 <p [class] = "myCSS">My CSS</p> - HTML
 myCSS = "red"; - TS // This red is the class name which we use in CSS file. 
 .red{color:blue} - CSS
+
+The {{ emi | number:'1.2-2' }} syntax utilizes Angular's built-in number pipe for formatting.
+The format string '1.2-2' specifies the desired output:
+1: Minimum number of integer digits (always shows at least one digit).
+.2: Exactly two decimal places.
+-2: No grouping separators (e.g., commas for thousands).
+

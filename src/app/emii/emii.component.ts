@@ -28,5 +28,6 @@ export class EmiiComponent {
     const totalAmount = this.p + total;
     const totalGST = (totalAmount * this.gst) / 100;
     this.emi = parseFloat(((totalAmount + totalGST) / (this.t * 12)).toFixed(2));
+    // this.emi = ((totalAmount + totalGST) / (this.t * 12))
   }
 }
